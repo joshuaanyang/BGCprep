@@ -243,11 +243,12 @@ class Vector:
     def __mul__(self, scalar):
         return Vector(self.x * scalar, self.y * scalar)
 
+
 # Encapsulating
 
 
 class Bank:
-    def __init__(self, balance = 0):
+    def __init__(self, balance=0):
         self.__balance = balance
 
     def deposit(self, dep):
@@ -265,18 +266,37 @@ class Bank:
         print(self.__balance)
 
 
-bank = Bank()
-bank.deposit(10000)
-bank.check_balance()
+# bank = Bank()
+# bank.deposit(10000)
+# bank.check_balance()
+
+# reverse string
+
+def rev(strng):
+    new_string = strng[::-1]
+    return new_string
 
 
+# print(rev("ball"))
+
+def stringsConstruction(a, b):
+    count = 0
+    finding = True
+    a = a.split()
+    b = b.split()
+    while finding:
+        for i,x in enumerate(a):
+            pos = b.index(a[i])
+            if pos >= 0:
+                b.splice(pos, 1)
+            else:
+                finding = False
+                break
+
+        if finding:
+            count += 1
+
+    return count
 
 
-
-
-
-
-
-
-
-
+print(stringsConstruction("ab", "abcba"))
