@@ -245,6 +245,7 @@ class Vector:
 
 # Encapsulating
 
+
 class Bank:
     def __init__(self, balance = 0):
         self.__balance = balance
@@ -255,8 +256,18 @@ class Bank:
 
     def withdraw(self, amount):
         if amount > self.__balance:
-            print("Insufficient")
+            print("Insufficient funds")
+        else:
+            self.__balance = self.__balance - amount
+            print("Withdrawal successful")
 
+    def check_balance(self):
+        print(self.__balance)
+
+
+bank = Bank()
+bank.deposit(10000)
+bank.check_balance()
 
 
 
