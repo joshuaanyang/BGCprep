@@ -173,7 +173,7 @@ class Circle(Shape):
         self.radius = radius
 
     def get_area(self):
-        return 3.142 * self.radius**2
+        return 3.142 * self.radius ** 2
 
 
 # circle = Circle("red", 1)
@@ -227,7 +227,6 @@ class BinaryTree:
             return self._search(node.right, key)
 
 
-
 # overloading
 
 class Vector:
@@ -242,27 +241,21 @@ class Vector:
         return Vector(self.x - other, self.y - other)
 
     def __mul__(self, scalar):
-        return Vector(self.x * scalar, self.y*scalar)
+        return Vector(self.x * scalar, self.y * scalar)
 
+# Encapsulating
 
+class Bank:
+    def __init__(self, balance = 0):
+        self.__balance = balance
 
+    def deposit(self, dep):
+        self.__balance += dep
+        print("Successfully deposited")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    def withdraw(self, amount):
+        if amount > self.__balance:
+            print("Insufficient")
 
 
 
