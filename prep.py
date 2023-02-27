@@ -300,3 +300,13 @@ def stringsConstruction(a, b):
 
 
 print(stringsConstruction("ab", "abcba"))
+
+
+#factorial eg recursion
+
+def j_factorial(n):
+    if n == 1:
+        return 1
+    else:
+        return n*j_factorial(n-1)
+    
